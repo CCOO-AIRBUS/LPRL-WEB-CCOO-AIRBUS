@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reforma Ley PRL 2026 | CCOO Industria Airbus</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rojo: #CC0000;
+    --rojo-vivo: #E8000A;
+    --rojo-oscuro: #8B0000;
+    --rojo-suave: #FF3333;
+    --negro: #0A0A0A;
+    --gris-oscuro: #1A1A1A;
+    --gris-medio: #2D2D2D;
+    --gris-claro: #F5F0EE;
+    --blanco: #FFFFFF;
+    --crema: #FDF8F5;
+    --dorado: #C9952A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', serif;
+    background: var(--negro);
+    color: var(--blanco);
+    overflow-x: hidden;
+  }
+
+  /* ─── HEADER ─────────────────────────────────── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--rojo);
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* SVG CCOO Industria Airbus logo (recreated) */
+  .ccoo-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .org-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  .org-name span {
+    display: block;
+    color: var(--rojo-suave);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+  }
+
+  .header-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--rojo-suave);
+    border: 1px solid var(--rojo);
+    padding: 4px 10px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── HERO ────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 20% 50%, rgba(204,0,0,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 80% 20%, rgba(204,0,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-text {
+    padding: 80px 60px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--rojo-suave);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--rojo);
+  }
+
+  .hero-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 700;
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .hero-title .highlight {
+    color: var(--rojo-vivo);
+    display: block;
+  }
+
+  .hero-title .sub {
+    font-size: 0.45em;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    display: block;
+    letter-spacing: 0.05em;
+    margin-top: 8px;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.75);
+    max-width: 480px;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.08em;
+  }
+
+  .meta-item strong {
+    display: block;
+    font-size: 18px;
+    color: var(--rojo-suave);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .big-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(120px, 15vw, 220px);
+    font-weight: 700;
+    color: rgba(204,0,0,0.08);
+    line-height: 1;
+    user-select: none;
+    position: absolute;
+    right: -20px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: -0.05em;
+  }
+
+  .law-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(204,0,0,0.3);
+    border-left: 4px solid var(--rojo);
+    padding: 40px;
+    max-width: 340px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .law-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rojo-suave);
+    margin-bottom: 16px;
+  }
+
+  .law-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .law-ref {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── TICKER ──────────────────────────────────── */
+  .ticker {
+    background: var(--rojo);
+    padding: 14px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .ticker-inner {
+    display: inline-flex;
+    animation: ticker 40s linear infinite;
+  }
+
+  .ticker-item {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0 48px;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .ticker-item::after {
+    content: '◆';
+    margin-left: 48px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── SECTIONS ────────────────────────────────── */
+  section {
+    padding: 100px 80px;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--rojo-suave);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--rojo);
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 48px;
+  }
+
+  .section-title em {
+    color: var(--rojo-vivo);
+    font-style: normal;
+  }
+
+  /* ─── BLOQUES TEMÁTICOS ───────────────────────── */
+  .bloques {
+    background: var(--gris-oscuro);
+  }
+
+  .bloques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .bloque {
+    background: rgba(255,255,255,0.02);
+    padding: 40px 36px;
+    border-top: 3px solid var(--rojo-oscuro);
+    transition: border-color 0.2s, background 0.2s;
+    cursor: default;
+  }
+
+  .bloque:hover {
+    background: rgba(204,0,0,0.06);
+    border-color: var(--rojo-vivo);
+  }
+
+  .bloque-icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .bloque h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    color: var(--blanco);
+  }
+
+  .bloque p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .bloque-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    background: rgba(204,0,0,0.2);
+    color: var(--rojo-suave);
+    padding: 3px 8px;
+    letter-spacing: 0.08em;
+  }
+
+  /* ─── NOVEDADES DESTACADAS ────────────────────── */
+  .novedades {
+    background: var(--negro);
+  }
+
+  .novedades-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .novedades-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+
+  .novedades-sidebar p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+
+  .acuerdo-box {
+    background: rgba(204,0,0,0.08);
+    border-left: 3px solid var(--rojo);
+    padding: 24px;
+  }
+
+  .acuerdo-box p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .acuerdo-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--rojo-suave);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .novedad-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .novedad-item {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    align-items: start;
+    transition: background 0.2s;
+  }
+
+  .novedad-item:hover {
+    background: rgba(204,0,0,0.05);
+    border-color: rgba(204,0,0,0.2);
+  }
+
+  .novedad-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(204,0,0,0.25);
+    line-height: 1;
+    text-align: right;
+  }
+
+  .novedad-content h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    color: var(--blanco);
+  }
+
+  .novedad-content p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ─── ARTÍCULOS CLAVE ─────────────────────────── */
+  .articulos {
+    background: var(--rojo-oscuro);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .articulos::before {
+    content: 'LEY';
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-size: 400px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.03);
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .articulos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .art-card {
+    background: rgba(0,0,0,0.3);
+    padding: 28px 24px;
+    border-bottom: 2px solid rgba(255,255,255,0.15);
+    transition: border-color 0.2s;
+  }
+
+  .art-card:hover {
+    border-color: var(--blanco);
+  }
+
+  .art-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  .art-card h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
+  .art-card p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* ─── TIMELINE ────────────────────────────────── */
+  .timeline-section {
+    background: var(--gris-oscuro);
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: 60px;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--rojo), rgba(204,0,0,0.1));
+  }
+
+  .tl-item {
+    position: relative;
+    padding: 0 0 56px 60px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: var(--rojo);
+    border: 2px solid var(--gris-oscuro);
+    outline: 2px solid var(--rojo);
+  }
+
+  .tl-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--rojo-suave);
+    letter-spacing: 0.05em;
+    padding-top: 2px;
+  }
+
+  .tl-body h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+  }
+
+  .tl-body p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ─── CTA / FOOTER ────────────────────────────── */
+  .cta-section {
+    background: var(--rojo);
+    padding: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(0,0,0,0.04) 10px,
+      rgba(0,0,0,0.04) 20px
+    );
+  }
+
+  .cta-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .cta-section p {
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .cta-tagline {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: 2px solid rgba(255,255,255,0.6);
+    padding: 16px 40px;
+    position: relative;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .cta-tagline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--blanco);
+  }
+
+  footer {
+    background: var(--negro);
+    padding: 40px 80px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: gap;
+    gap: 20px;
+  }
+
+  .footer-left {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+  }
+
+  .footer-right {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rojo-suave);
+  }
+
+  /* ─── DIVIDERS ────────────────────────────────── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--rojo), transparent);
+    margin: 0 80px;
+  }
+
+  /* ─── NAV PILLS ───────────────────────────────── */
+  nav {
+    display: flex;
+    gap: 4px;
+  }
+
+  nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(255,255,255,0.55);
+    padding: 6px 14px;
+    transition: color 0.15s;
+  }
+
+  nav a:hover { color: var(--blanco); }
+
+  /* ─── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .hero-text { padding: 60px 32px; }
+    section { padding: 60px 32px; }
+    .bloques-grid { grid-template-columns: 1fr; }
+    .novedades-layout { grid-template-columns: 1fr; }
+    .novedades-sidebar { position: static; }
+    .articulos-grid { grid-template-columns: repeat(2,1fr); }
+    .tl-item { grid-template-columns: 1fr; gap: 8px; }
+    footer { padding: 32px; flex-direction: column; }
+    .cta-section { padding: 60px 32px; }
+    .divider { margin: 0 32px; }
+    header { padding: 0 24px; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─────────────────────────────────── -->
+<header>
+  <div class="logo-area">
+    <!-- CCOO Industria Airbus Logo SVG -->
+    <svg class="ccoo-logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <!-- Base roja CCOO -->
+      <circle cx="24" cy="24" r="23" fill="#CC0000"/>
+      <!-- Letras CC internas -->
+      <text x="24" y="20" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">CC</text>
+      <text x="24" y="31" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">OO</text>
+      <!-- Línea decorativa -->
+      <line x1="8" y1="22" x2="40" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+    </svg>
+    <div class="org-name">
+      CCOO Industria
+      <span>Airbus Interempresas</span>
+    </div>
+  </div>
+  <nav>
+    <a href="#bloques">Temáticas</a>
+    <a href="#novedades">Novedades</a>
+    <a href="#articulos">Artículos</a>
+    <a href="#timeline">Plazos</a>
+  </nav>
+  <div class="header-badge">BORRADOR · 16.03.2026</div>
+</header>
+
+
+<!-- ─── HERO ────────────────────────────────────── -->
+<section class="hero" style="padding-top: 64px; padding-left: 0; padding-right: 0; padding-bottom: 0;">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Nueva legislación laboral 2026</div>
+    <h1 class="hero-title">
+      <span class="highlight">Reforma</span>
+      de la Ley
+      <span class="highlight">PRL</span>
+      <span class="sub">Anteproyecto · Ministerio de Trabajo</span>
+    </h1>
+    <p class="hero-desc">
+      CCOO ha negociado y firmado el acuerdo de mejora y modernización de la Ley de Prevención de Riesgos Laborales. Te explicamos qué cambia para los trabajadores y trabajadoras de Airbus.
+    </p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <strong>3</strong>
+        Leyes modificadas
+      </div>
+      <div class="meta-item">
+        <strong>30+</strong>
+        Nuevos artículos
+      </div>
+      <div class="meta-item">
+        <strong>2027</strong>
+        Entrada en vigor
+      </div>
+      <div class="meta-item">
+        <strong>31</strong>
+        Años de la norma actual
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="big-date">2026</div>
+    <div class="law-card">
+      <h3>Acuerdo histórico</h3>
+      <p>El 10 de febrero de 2026, el Gobierno, CCOO y UGT firmaron el Acuerdo de mejora y modernización de la Ley PRL, fruto de un intenso proceso de negociación sindical.</p>
+      <p style="margin-bottom:0;">Esta reforma responde a los retos de la digitalización, el cambio climático, los riesgos psicosociales y el envejecimiento de la plantilla.</p>
+      <div class="law-ref">LEY 31/1995 · RD 39/1997 · ET 2/2015</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── TICKER ──────────────────────────────────── -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Riesgos Psicosociales</span>
+    <span class="ticker-item">Perspectiva de Género</span>
+    <span class="ticker-item">Cambio Climático Laboral</span>
+    <span class="ticker-item">Violencia y Acoso</span>
+    <span class="ticker-item">Protocolo Reincorporación</span>
+    <span class="ticker-item">Desconexión Digital</span>
+    <span class="ticker-item">Agentes Territoriales</span>
+    <span class="ticker-item">Salud Mental</span>
+    <span class="ticker-item">Delegados Prevención</span>
+    <span class="ticker-item">Riesgos Psicosociales</span>
+    <span class="ticker-item">Perspectiva de Género</span>
+    <span class="ticker-item">Cambio Climático Laboral</span>
+    <span class="ticker-item">Violencia y Acoso</span>
+    <span class="ticker-item">Protocolo Reincorporación</span>
+    <span class="ticker-item">Desconexión Digital</span>
+    <span class="ticker-item">Agentes Territoriales</span>
+    <span class="ticker-item">Salud Mental</span>
+    <span class="ticker-item">Delegados Prevención</span>
+  </div>
+</div>
+
+
+<!-- ─── BLOQUES TEMÁTICOS ─────────────────────── -->
+<section class="bloques" id="bloques">
+  <div class="section-label">Ejes de la reforma</div>
+  <h2 class="section-title">¿Qué cambia<br><em>en tu trabajo?</em></h2>
+
+  <div class="bloques-grid">
+    <div class="bloque">
+      <span class="bloque-icon">🧠</span>
+      <h3>Riesgos Psicosociales</h3>
+      <p>Por primera vez se incorporan explícitamente en la evaluación de riesgos. El estrés, el burnout y los factores organizativos pasan a ser objeto de prevención obligatoria.</p>
+      <span class="bloque-tag">ART. 16 · NUEVO REGLAMENTO 2027</span>
+    </div>
+    <div class="bloque">
+      <span class="bloque-icon">⚥</span>
+      <h3>Perspectiva de Género y Edad</h3>
+      <p>Se integra como principio preventivo básico. Las evaluaciones deberán considerar diferencias biológicas, antropométricas y factores ligados al género y a la edad.</p>
+      <span class="bloque-tag">ART. 15.1.E · ART. 4 NUEVO</span>
+    </div>
+    <div class="bloque">
+      <span class="bloque-icon">🌡️</span>
+      <h3>Cambio Climático</h3>
+      <p>Los fenómenos meteorológicos extremos se incorporan como condición de trabajo. Las catástrofes naturales generan riesgo grave e inminente y obligan a protocolos específicos.</p>
+      <span class="bloque-tag">ART. 4.4.º · ART. 20 REFORMADO</span>
+    </div>
+    <div class="bloque">
+      <span class="bloque-icon">🚫</span>
+      <h3>Violencia y Acoso Laboral</h3>
+      <p>Se define legalmente «violencia y acoso laborales» incluyendo el acoso digital, algorítmico y por IA. La empresa tiene deber explícito de protección frente a cualquier forma de acoso.</p>
+      <span class="bloque-tag">ART. 4.13.º · ART. 14.2 NUEVO</span>
+    </div>
+    <div class="bloque">
+      <span class="bloque-icon">↩️</span>
+      <h3>Retorno al Trabajo</h3>
+      <p>Tras ausencias superiores a 6 meses por motivos de salud, la empresa debe establecer un protocolo de reincorporación con adaptación del puesto y actualización formativa.</p>
+      <span class="bloque-tag">ART. 25.3 · ART. 22 REFORMADO</span>
+    </div>
+    <div class="bloque">
+      <span class="bloque-icon">📱</span>
+      <h3>Desconexión Digital</h3>
+      <p>El derecho a la desconexión digital queda reconocido expresamente como parte del derecho a la protección eficaz en materia de seguridad y salud en el trabajo.</p>
+      <span class="bloque-tag">ART. 14.1 · NUEVO DERECHO</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── NOVEDADES DESTACADAS ──────────────────── -->
+<div class="divider"></div>
+<section class="novedades" id="novedades">
+  <div class="section-label">Lo más relevante</div>
+  <div class="novedades-layout">
+    <div class="novedades-sidebar">
+      <h2 class="section-title" style="font-size: 36px;">Novedades<br><em>clave</em><br>para ti</h2>
+      <p>Desde CCOO Industria Airbus hemos participado activamente en la negociación de esta reforma. Estos son los avances que más te afectan.</p>
+      <div class="acuerdo-box">
+        <span class="acuerdo-date">10.02.2026</span>
+        <p>Firma del Acuerdo de mejora y modernización entre el Gobierno, CCOO y UGT.</p>
+      </div>
+    </div>
+
+    <div class="novedad-list">
+      <div class="novedad-item">
+        <div class="novedad-num">01</div>
+        <div class="novedad-content">
+          <h4>Vigilancia de la Salud Mental Obligatoria</h4>
+          <p>La empresa garantizará la vigilancia de la salud física <strong>y mental</strong> de toda la plantilla. Incluye pruebas específicas al inicio, periódicamente y tras bajas prolongadas. La vigilancia será individual y colectiva con análisis epidemiológicos.</p>
+        </div>
+      </div>
+      <div class="novedad-item">
+        <div class="novedad-num">02</div>
+        <div class="novedad-content">
+          <h4>Más Crédito Horario para Delegados de Prevención</h4>
+          <p>El crédito horario de los delegados y delegadas de prevención se incrementa un <strong>20% adicional</strong> para la realización de actividades preventivas en el centro de trabajo. La formación se adapta a cada sector.</p>
+        </div>
+      </div>
+      <div class="novedad-item">
+        <div class="novedad-num">03</div>
+        <div class="novedad-content">
+          <h4>Agentes Territoriales de Prevención</h4>
+          <p>Se crean nuevas figuras sindicales designadas por las organizaciones sindicales más representativas en cada comunidad autónoma para empresas de menos de 10 trabajadores sin representación.</p>
+        </div>
+      </div>
+      <div class="novedad-item">
+        <div class="novedad-num">04</div>
+        <div class="novedad-content">
+          <h4>Evaluación de Riesgos Ampliada</h4>
+          <p>Deberá revisarse la evaluación cuando cambien procesos, organización del trabajo o procedimientos. Las evaluaciones <strong>deben realizarse con visita presencial</strong> al centro de trabajo.</p>
+        </div>
+      </div>
+      <div class="novedad-item">
+        <div class="novedad-num">05</div>
+        <div class="novedad-content">
+          <h4>EPIs Adaptados a Medidas Antropométricas</h4>
+          <p>Los equipos de protección individual deben estar adaptados a las <strong>características físicas y medidas antropométricas</strong> de cada trabajador/a, eliminando la talla única masculina por defecto.</p>
+        </div>
+      </div>
+      <div class="novedad-item">
+        <div class="novedad-num">06</div>
+        <div class="novedad-content">
+          <h4>Formación Práctica Presencial</h4>
+          <p>La formación práctica en prevención <strong>deberá impartirse de manera presencial</strong>. Solo excepcionalmente, y con causas justificadas, podrá ser en modalidad no presencial.</p>
+        </div>
+      </div>
+      <div class="novedad-item">
+        <div class="novedad-num">07</div>
+        <div class="novedad-content">
+          <h4>Informe Clínico-Laboral Detallado</h4>
+          <p>Tras cualquier examen de salud, recibirás un informe clínico-laboral en 15 días hábiles. Tienes derecho a copia de tu historia clínico-laboral completa y todos los datos médicos del servicio de prevención.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── ARTÍCULOS CLAVE ─────────────────────────── -->
+<section class="articulos" id="articulos">
+  <div class="section-label">Marco legal</div>
+  <h2 class="section-title" style="color: rgba(255,255,255,0.9);">Artículos<br><em style="color: rgba(255,255,255,0.4); font-style: italic;">modificados</em></h2>
+
+  <div class="articulos-grid">
+    <div class="art-card">
+      <div class="art-num">LEY PRL · ART. 4</div>
+      <h4>Nuevas Definiciones</h4>
+      <p>Se añaden 7 definiciones nuevas: perspectiva de género, perspectiva de edad, característica personal, violencia y acoso, ausencia prolongada, condición de trabajo ampliada, y puesto de trabajo.</p>
+    </div>
+    <div class="art-card">
+      <div class="art-num">LEY PRL · ART. 14</div>
+      <h4>Derecho a Protección</h4>
+      <p>Incluye perspectivas de género y edad, protección frente a violencia y acoso sexual, y el derecho a la desconexión digital como parte del derecho general a la protección eficaz.</p>
+    </div>
+    <div class="art-card">
+      <div class="art-num">LEY PRL · ART. 15</div>
+      <h4>Principios Preventivos</h4>
+      <p>Nuevos principios: integrar perspectivas de género/edad, tener en cuenta la evolución tecnológica y la digitalización, y adaptar el trabajo a la persona de forma integral.</p>
+    </div>
+    <div class="art-card">
+      <div class="art-num">LEY PRL · ART. 16</div>
+      <h4>Evaluación y Planificación</h4>
+      <p>Incluye riesgos psicosociales y climáticos. Amplía los supuestos de revisión. Obliga a definir procedimientos de trabajo seguros para operaciones de riesgo.</p>
+    </div>
+    <div class="art-card">
+      <div class="art-num">LEY PRL · ART. 22</div>
+      <h4>Vigilancia de la Salud</h4>
+      <p>Extiende la vigilancia a la salud mental. Incorpora vigilancia colectiva. Obliga a entregar informe clínico-laboral en 15 días. Derecho a la historia clínica completa.</p>
+    </div>
+    <div class="art-card">
+      <div class="art-num">LEY PRL · ART. 25</div>
+      <h4>Trabajadores Sensibles</h4>
+      <p>Nuevo apartado 3: protocolo obligatorio de retorno al trabajo tras bajas superiores a 6 meses, con evaluación de riesgos, adaptación del puesto y formación actualizada.</p>
+    </div>
+    <div class="art-card">
+      <div class="art-num">LEY PRL · ART. 37</div>
+      <h4>Garantías Delegados</h4>
+      <p>Incremento del 20% del crédito horario para actividades preventivas en el centro de trabajo. Formación mínima de nivel básico adaptada al sector de actividad.</p>
+    </div>
+    <div class="art-card">
+      <div class="art-num">ESTATUTO TRABAJADORES · ART. 4</div>
+      <h4>Derechos Laborales</h4>
+      <p>Se reconoce explícitamente el derecho a la integridad física y moral, y la protección frente a la violencia y cualquier tipo de acoso, incluyendo el acoso sexual y por razón de sexo.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── TIMELINE ─────────────────────────────────── -->
+<section class="timeline-section" id="timeline">
+  <div class="section-label">Plazos de aplicación</div>
+  <h2 class="section-title">¿Cuándo entra<br><em>en vigor?</em></h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">10 FEB 2026</div>
+      <div class="tl-body">
+        <h4>Firma del Acuerdo Social</h4>
+        <p>El Gobierno, CCOO y UGT firman el Acuerdo de mejora y modernización de la Ley PRL tras meses de negociación. CCOO Industria participa activamente en la defensa de las plantillas industriales.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">16 MAR 2026</div>
+      <div class="tl-body">
+        <h4>Publicación del Anteproyecto</h4>
+        <p>El Ministerio de Trabajo publica el borrador del Anteproyecto de Ley. Se abre el período de consultas y trámites parlamentarios. Este documento que estás consultando.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026 – 2027</div>
+      <div class="tl-body">
+        <h4>Tramitación Parlamentaria</h4>
+        <p>El anteproyecto recorre los trámites legislativos: informes de los ministerios afectados, Consejo de Estado, Congreso y Senado. Desde CCOO seguiremos cada paso.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2 ENE 2027</div>
+      <div class="tl-body">
+        <h4>Entrada en Vigor General</h4>
+        <p>La mayor parte de las modificaciones entran en vigor. Las empresas deberán haber adaptado sus planes de prevención, evaluaciones de riesgos y protocolos internos.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">JUL 2027</div>
+      <div class="tl-body">
+        <h4>Formación Nivel Básico (nueva)</h4>
+        <p>A los 6 meses de la entrada en vigor: nuevos contenidos mínimos del programa de formación de nivel básico, incluyendo perspectiva de género, edad y riesgos psicosociales.</p>
+      </div>
+    </div>
+    <div class="tl-item" style="padding-bottom: 0;">
+      <div class="tl-date">ENE 2028</div>
+      <div class="tl-body">
+        <h4>Formación Niveles Intermedio y Superior</h4>
+        <p>Al año de la entrada en vigor: nuevas cualificaciones y contenidos para técnicos de prevención de nivel intermedio y superior. Las entidades formadoras deberán adaptarse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── CTA ───────────────────────────────────────── -->
+<div class="cta-section">
+  <h2>Conocer lo que te corresponde<br>es el primer paso para defenderlo</h2>
+  <p>Desde CCOO Industria Airbus te mantendremos informado/a de cada avance en la tramitación de esta reforma. Tu salud laboral es nuestra prioridad.</p>
+  <div class="cta-tagline">¡El poder de cambiar las cosas!</div>
+</div>
+
+
+<!-- ─── FOOTER ────────────────────────────────────── -->
+<footer>
+  <div class="footer-left">
+    CCOO INDUSTRIA · AIRBUS INTEREMPRESAS<br>
+    Comunicación Digital · Prevención de Riesgos Laborales<br>
+    Basado en el Anteproyecto de Ley · 16.03.2026
+  </div>
+  <div class="footer-right">
+    Comisiones Obreras · Industria
+  </div>
+</footer>
+
+</body>
+</html>
