@@ -26,8 +26,8 @@
 
   body {
     font-family: 'Source Serif 4', serif;
-    background: var(--negro);
-    color: var(--blanco);
+    background: var(--blanco);
+    color: var(--negro);
     overflow-x: hidden;
   }
 
@@ -36,7 +36,7 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(10,10,10,0.95);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(12px);
     border-bottom: 2px solid var(--rojo);
     padding: 0 40px;
@@ -44,6 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   }
 
   .logo-area {
@@ -66,11 +67,12 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     line-height: 1.3;
+    color: var(--negro);
   }
 
   .org-name span {
     display: block;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     font-size: 10px;
     letter-spacing: 0.15em;
     font-weight: 400;
@@ -79,10 +81,11 @@
   .header-badge {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     border: 1px solid var(--rojo);
     padding: 4px 10px;
     letter-spacing: 0.05em;
+    background: rgba(204,0,0,0.05);
   }
 
   /* ─── HERO ────────────────────────────────────── */
@@ -100,8 +103,8 @@
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background:
-      radial-gradient(ellipse 60% 80% at 20% 50%, rgba(204,0,0,0.12) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 60% at 80% 20%, rgba(204,0,0,0.06) 0%, transparent 70%);
+      radial-gradient(ellipse 60% 80% at 20% 50%, rgba(204,0,0,0.05) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 80% 20%, rgba(204,0,0,0.03) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -118,7 +121,7 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.2em;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     text-transform: uppercase;
     margin-bottom: 28px;
     display: flex;
@@ -141,17 +144,18 @@
     line-height: 0.95;
     text-transform: uppercase;
     margin-bottom: 32px;
+    color: var(--negro);
   }
 
   .hero-title .highlight {
-    color: var(--rojo-vivo);
+    color: var(--rojo);
     display: block;
   }
 
   .hero-title .sub {
     font-size: 0.45em;
     font-weight: 400;
-    color: rgba(255,255,255,0.5);
+    color: rgba(0,0,0,0.5);
     display: block;
     letter-spacing: 0.05em;
     margin-top: 8px;
@@ -159,9 +163,9 @@
 
   .hero-desc {
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.75;
-    color: rgba(255,255,255,0.75);
+    color: rgba(0,0,0,0.75);
     max-width: 480px;
     margin-bottom: 40px;
     font-style: italic;
@@ -176,14 +180,14 @@
   .meta-item {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    color: rgba(255,255,255,0.45);
+    color: rgba(0,0,0,0.5);
     letter-spacing: 0.08em;
   }
 
   .meta-item strong {
     display: block;
     font-size: 18px;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     letter-spacing: 0;
@@ -201,7 +205,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: clamp(120px, 15vw, 220px);
     font-weight: 700;
-    color: rgba(204,0,0,0.08);
+    color: rgba(204,0,0,0.04);
     line-height: 1;
     user-select: none;
     position: absolute;
@@ -212,13 +216,14 @@
   }
 
   .law-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(204,0,0,0.3);
+    background: var(--blanco);
+    border: 1px solid rgba(0,0,0,0.08);
     border-left: 4px solid var(--rojo);
     padding: 40px;
     max-width: 340px;
     position: relative;
     z-index: 1;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   }
 
   .law-card h3 {
@@ -227,13 +232,13 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     margin-bottom: 16px;
   }
 
   .law-card p {
     font-size: 13px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(0,0,0,0.6);
     line-height: 1.7;
     margin-bottom: 20px;
   }
@@ -241,8 +246,8 @@
   .law-ref {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    color: rgba(255,255,255,0.3);
-    border-top: 1px solid rgba(255,255,255,0.08);
+    color: rgba(0,0,0,0.4);
+    border-top: 1px solid rgba(0,0,0,0.08);
     padding-top: 16px;
     letter-spacing: 0.05em;
   }
@@ -268,7 +273,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0 48px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.95);
   }
 
   .ticker-item::after {
@@ -291,7 +296,7 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.2em;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     text-transform: uppercase;
     margin-bottom: 20px;
     display: flex;
@@ -314,35 +319,39 @@
     text-transform: uppercase;
     line-height: 1.05;
     margin-bottom: 48px;
+    color: var(--negro);
   }
 
   .section-title em {
-    color: var(--rojo-vivo);
+    color: var(--rojo);
     font-style: normal;
   }
 
   /* ─── BLOQUES TEMÁTICOS ───────────────────────── */
   .bloques {
-    background: var(--gris-oscuro);
+    background: var(--gris-claro);
   }
 
   .bloques-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    gap: 16px;
     margin-top: 60px;
   }
 
   .bloque {
-    background: rgba(255,255,255,0.02);
+    background: var(--blanco);
     padding: 40px 36px;
-    border-top: 3px solid var(--rojo-oscuro);
-    transition: border-color 0.2s, background 0.2s;
+    border-top: 3px solid var(--rojo);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     cursor: default;
+    border-radius: 4px;
   }
 
   .bloque:hover {
-    background: rgba(204,0,0,0.06);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(204,0,0,0.08);
     border-color: var(--rojo-vivo);
   }
 
@@ -359,14 +368,14 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 14px;
-    color: var(--blanco);
+    color: var(--negro);
   }
 
   .bloque p {
     font-size: 14px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(0,0,0,0.65);
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .bloque-tag {
@@ -374,15 +383,16 @@
     margin-top: 16px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    background: rgba(204,0,0,0.2);
-    color: var(--rojo-suave);
-    padding: 3px 8px;
+    background: rgba(204,0,0,0.08);
+    color: var(--rojo-oscuro);
+    padding: 4px 10px;
+    border-radius: 2px;
     letter-spacing: 0.08em;
   }
 
   /* ─── NOVEDADES DESTACADAS ────────────────────── */
   .novedades {
-    background: var(--negro);
+    background: var(--blanco);
   }
 
   .novedades-layout {
@@ -399,15 +409,15 @@
 
   .novedades-sidebar p {
     font-size: 16px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(0,0,0,0.65);
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
     margin-bottom: 32px;
   }
 
   .acuerdo-box {
-    background: rgba(204,0,0,0.08);
+    background: rgba(204,0,0,0.05);
     border-left: 3px solid var(--rojo);
     padding: 24px;
   }
@@ -415,13 +425,15 @@
   .acuerdo-box p {
     font-size: 13px;
     margin-bottom: 0;
+    color: var(--negro);
+    font-style: normal;
   }
 
   .acuerdo-date {
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     display: block;
     margin-bottom: 8px;
   }
@@ -429,22 +441,23 @@
   .novedad-list {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 12px;
   }
 
   .novedad-item {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: var(--blanco);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 6px;
     padding: 28px 32px;
     display: grid;
     grid-template-columns: 48px 1fr;
     gap: 24px;
     align-items: start;
-    transition: background 0.2s;
+    transition: background 0.2s, border-color 0.2s;
   }
 
   .novedad-item:hover {
-    background: rgba(204,0,0,0.05);
+    background: rgba(204,0,0,0.02);
     border-color: rgba(204,0,0,0.2);
   }
 
@@ -452,7 +465,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: rgba(204,0,0,0.25);
+    color: rgba(204,0,0,0.15);
     line-height: 1;
     text-align: right;
   }
@@ -464,19 +477,19 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
-    color: var(--blanco);
+    color: var(--negro);
   }
 
   .novedad-content p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+    color: rgba(0,0,0,0.65);
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   /* ─── ARTÍCULOS CLAVE ─────────────────────────── */
   .articulos {
-    background: var(--rojo-oscuro);
+    background: var(--gris-claro);
     position: relative;
     overflow: hidden;
   }
@@ -487,7 +500,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 400px;
     font-weight: 700;
-    color: rgba(255,255,255,0.03);
+    color: rgba(0,0,0,0.02);
     right: -60px;
     top: 50%;
     transform: translateY(-50%);
@@ -505,20 +518,23 @@
   }
 
   .art-card {
-    background: rgba(0,0,0,0.3);
+    background: var(--blanco);
     padding: 28px 24px;
-    border-bottom: 2px solid rgba(255,255,255,0.15);
-    transition: border-color 0.2s;
+    border-radius: 6px;
+    border-bottom: 3px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: border-color 0.2s, transform 0.2s;
   }
 
   .art-card:hover {
-    border-color: var(--blanco);
+    border-color: var(--rojo);
+    transform: translateY(-2px);
   }
 
   .art-num {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    color: rgba(255,255,255,0.45);
+    color: rgba(0,0,0,0.5);
     letter-spacing: 0.1em;
     margin-bottom: 12px;
   }
@@ -530,18 +546,19 @@
     text-transform: uppercase;
     letter-spacing: 0.03em;
     margin-bottom: 10px;
+    color: var(--negro);
   }
 
   .art-card p {
-    font-size: 12px;
-    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+    color: rgba(0,0,0,0.65);
     line-height: 1.65;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   /* ─── TIMELINE ────────────────────────────────── */
   .timeline-section {
-    background: var(--gris-oscuro);
+    background: var(--blanco);
   }
 
   .timeline {
@@ -557,7 +574,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--rojo), rgba(204,0,0,0.1));
+    background: linear-gradient(to bottom, var(--rojo), rgba(204,0,0,0.05));
   }
 
   .tl-item {
@@ -577,15 +594,16 @@
     width: 14px;
     height: 14px;
     background: var(--rojo);
-    border: 2px solid var(--gris-oscuro);
+    border: 2px solid var(--blanco);
     outline: 2px solid var(--rojo);
+    border-radius: 50%;
   }
 
   .tl-date {
     font-family: 'Oswald', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: var(--rojo-suave);
+    color: var(--rojo);
     letter-spacing: 0.05em;
     padding-top: 2px;
   }
@@ -597,13 +615,14 @@
     text-transform: uppercase;
     margin-bottom: 8px;
     letter-spacing: 0.03em;
+    color: var(--negro);
   }
 
   .tl-body p {
     font-size: 14px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(0,0,0,0.65);
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   /* ─── CTA / FOOTER ────────────────────────────── */
@@ -613,6 +632,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    color: var(--blanco);
   }
 
   .cta-section::before {
@@ -640,9 +660,9 @@
 
   .cta-section p {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.9);
     max-width: 600px;
     margin: 0 auto 40px;
     line-height: 1.7;
@@ -659,29 +679,31 @@
     border: 2px solid rgba(255,255,255,0.6);
     padding: 16px 40px;
     position: relative;
-    transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    cursor: pointer;
   }
 
   .cta-tagline:hover {
-    background: rgba(255,255,255,0.1);
+    background: var(--blanco);
     border-color: var(--blanco);
+    color: var(--rojo);
   }
 
   footer {
-    background: var(--negro);
+    background: var(--gris-claro);
     padding: 40px 80px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(0,0,0,0.06);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: gap;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
   .footer-left {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    color: rgba(255,255,255,0.3);
+    color: rgba(0,0,0,0.5);
     letter-spacing: 0.08em;
     line-height: 1.8;
   }
@@ -692,13 +714,13 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--rojo-suave);
+    color: var(--rojo);
   }
 
   /* ─── DIVIDERS ────────────────────────────────── */
   .divider {
     height: 1px;
-    background: linear-gradient(to right, var(--rojo), transparent);
+    background: linear-gradient(to right, rgba(204,0,0,0.2), transparent);
     margin: 0 80px;
   }
 
@@ -715,12 +737,12 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: none;
-    color: rgba(255,255,255,0.55);
+    color: rgba(0,0,0,0.55);
     padding: 6px 14px;
     transition: color 0.15s;
   }
 
-  nav a:hover { color: var(--blanco); }
+  nav a:hover { color: var(--negro); }
 
   /* ─── RESPONSIVE ──────────────────────────────── */
   @media (max-width: 900px) {
@@ -746,16 +768,17 @@
 <!-- ─── HEADER ─────────────────────────────────── -->
 <header>
   <div class="logo-area">
-    <!-- CCOO Industria Airbus Logo SVG -->
-    <svg class="ccoo-logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <!-- Base roja CCOO -->
+    <!-- IMAGEN DEL LOGO: Sustituye 'logo.png' por el nombre de tu archivo de logo real -->
+    <img src="logo.png" alt="Logo CCOO Industria Airbus" style="height: 44px; width: auto; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    
+    <!-- SVG de respaldo por si falla la imagen anterior -->
+    <svg class="ccoo-logo" style="display:none;" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
       <circle cx="24" cy="24" r="23" fill="#CC0000"/>
-      <!-- Letras CC internas -->
       <text x="24" y="20" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">CC</text>
       <text x="24" y="31" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">OO</text>
-      <!-- Línea decorativa -->
       <line x1="8" y1="22" x2="40" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
     </svg>
+    
     <div class="org-name">
       CCOO Industria
       <span>Airbus Interempresas</span>
@@ -865,19 +888,19 @@
       <span class="bloque-tag">ART. 4.4.º · ART. 20 REFORMADO</span>
     </div>
     <div class="bloque">
-      <span class="bloque-icon">🚫</span>
+      <span class="bloque-icon">🛡️</span>
       <h3>Violencia y Acoso Laboral</h3>
       <p>Se define legalmente «violencia y acoso laborales» incluyendo el acoso digital, algorítmico y por IA. La empresa tiene deber explícito de protección frente a cualquier forma de acoso.</p>
       <span class="bloque-tag">ART. 4.13.º · ART. 14.2 NUEVO</span>
     </div>
     <div class="bloque">
-      <span class="bloque-icon">↩️</span>
+      <span class="bloque-icon">🔄</span>
       <h3>Retorno al Trabajo</h3>
       <p>Tras ausencias superiores a 6 meses por motivos de salud, la empresa debe establecer un protocolo de reincorporación con adaptación del puesto y actualización formativa.</p>
       <span class="bloque-tag">ART. 25.3 · ART. 22 REFORMADO</span>
     </div>
     <div class="bloque">
-      <span class="bloque-icon">📱</span>
+      <span class="bloque-icon">🔌</span>
       <h3>Desconexión Digital</h3>
       <p>El derecho a la desconexión digital queda reconocido expresamente como parte del derecho a la protección eficaz en materia de seguridad y salud en el trabajo.</p>
       <span class="bloque-tag">ART. 14.1 · NUEVO DERECHO</span>
@@ -958,7 +981,7 @@
 <!-- ─── ARTÍCULOS CLAVE ─────────────────────────── -->
 <section class="articulos" id="articulos">
   <div class="section-label">Marco legal</div>
-  <h2 class="section-title" style="color: rgba(255,255,255,0.9);">Artículos<br><em style="color: rgba(255,255,255,0.4); font-style: italic;">modificados</em></h2>
+  <h2 class="section-title">Artículos<br><em style="color: rgba(0,0,0,0.4); font-style: italic;">modificados</em></h2>
 
   <div class="articulos-grid">
     <div class="art-card">
@@ -989,7 +1012,7 @@
     <div class="art-card">
       <div class="art-num">LEY PRL · ART. 25</div>
       <h4>Trabajadores Sensibles</h4>
-      <p>Nuevo apartado 3: protocolo obligatorio de retorno al trabajo tras bajas superiores a 6 meses, con evaluación de riesgos, adaptación del puesto y formación actualizada.</p>
+      <p>Nuevo apartado 3: protocol obligatorio de retorno al trabajo tras bajas superiores a 6 meses, con evaluación de riesgos, adaptación del puesto y formación actualizada.</p>
     </div>
     <div class="art-card">
       <div class="art-num">LEY PRL · ART. 37</div>
